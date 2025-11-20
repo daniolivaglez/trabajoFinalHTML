@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Metadatos -->
+        <meta charset="UTF-8">
+        <meta name="robots" content="index,follow">
+        <meta name="Author" content="Dani Oliva">
+        <meta name="description" content="HTML">
+        <meta name="keywords" content="web, curso HTML, crear web">
+        <meta name="locality" content="malaga,andalucia,spain,europa">
+        <meta name="category" content="Programación web">
+        <!-- Enlace al archivo de estilos CSS
+        Las rutas cambian al estar dentro de la carpeta views-->
+        <link rel="stylesheet" href="../css/estilos.css">
+        <!-- Título de la página-->
+        <title>Danny Sistemas</title>
+    </head>
+    <body>
+        <!-- Encabezado de la página -->
+        <header>
+            <!-- Contenedor del encabezado -->
+            <div class="container">
+                <!-- Contenido del encabezado -->
+                <div class="header-content">
+                    <a href="../index.html"><img src="../images/malaga.png" alt="logo" width="100"></a>
+                    <nav class="nav-menu">
+                        <a href="../index.html">Inicio</a>
+                        <a href="productos.html">Productos</a>
+                        <!-- Enlace a la página de productos con la clase active para indicar que es la página actual-->
+                        <a class="active" href="presupuesto.html">Presupuesto</a>
+                        <a href="contacto.html">Contacto</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <section id="presupuesto-content">
+                    <h2>Presupuesto</h2>
+                    <p>Complete el siguiente formulario para obtener un presupuesto:</p>
+                    <!-- Form que sería método post con target a _blank, abriendo otra pestaña-->
+                    <form id="presupuesto-form" method="post" target="_blank">
+                        <!-- Todos los inputs son requeridos-->
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required placeholder="Introduzca su nombre" autofocus>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required placeholder="Introduzca su email">
+                        <label for="telefono">Teléfono:</label>
+                        <!-- Añadimos un patrón para que el teléfono sea de 9 caracteres numéricos-->
+                        <input type="tel" id="telefono" name="telefono" required placeholder="Introduzca su teléfono: 123456789" pattern="[0-9]{9}">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" required placeholder="Introduzca su mensaje"></textarea>
+                        <input type="checkbox" id="acepto-politica" name="acepto-politica" required>Acepto la <a href="politica-de-privacidad.html">política de privacidad</a>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </section>
+            </div>
+        </main>
+        <!-- Pie de página de la página -->
+        <footer>
+            <!-- Contenedor del pie de página -->
+            <div class="container">
+                <!-- Contenido del pie de página -->
+                <div class="footer-content">
+                    <!-- Usamos un div para cada item del contenido del pie de página con la misma clase-->
+                    <div class="footer-content-item">
+                        <!-- Aquí primero añadimos las redes sociales de la empresa usando un listado de enlaces -->
+                        <h3>Redes sociales</h3>
+                        <ul>
+                            <!-- Enlaces en modo lista con imágenes de los logos
+                             para que se muestren en horizontal.
+                             Las redes sociales no las he creado, simplemente he puesto el nombre de la empresa
+                             que he visto que la de instagram sí existe -->
+                            <li><a href="https://www.x.com/dannysistemas"><img src="../images/xlogo.png" alt="X (Twitter)" width="24" height="24"> X</a></li>
+                            <li><a href="https://www.instagram.com/dannysistemas"><img src="../images/instagramlogo.png" alt="Instagram" width="24" height="24"> Instagram</a></li>
+                            <li><a href="https://www.linkedin.com/dannysistemas"><img src="../images/linkeidlogo.png" alt="LinkedIn" width="24" height="24"> LinkedIn</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-content-item">
+                        <!-- Aquí añadimos la información legal de la empresa usando un parrafo con enlaces a las diferentes políticas de la empresa-->
+                        <h3>Información legal</h3>
+                        <p>
+                            <a href="#cookies" class="footer-content-item-link">Política de cookies</a>
+                            <a href="#politica-de-privacidad" class="footer-content-item-link">Política de privacidad</a>
+                            <a href="#terminos-y-condiciones" class="footer-content-item-link">Términos y condiciones</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>Derechos reservados &copy; 2025 Danny Sistemas</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

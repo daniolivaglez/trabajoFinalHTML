@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Metadatos -->
+        <meta charset="UTF-8">
+        <meta name="robots" content="index,follow">
+        <meta name="Author" content="Dani Oliva">
+        <meta name="description" content="HTML">
+        <meta name="keywords" content="Sistemas de seguridad, Sistemas de control, Sistemas antiincendios">
+        <meta name="locality" content="malaga,andalucia,spain,europa">
+        <meta name="category" content="Programación web">
+        <meta name="description" content="Empresa dedicada a la venta de productos de sistemas de seguridad, control y antiincendios">
+        <!-- Enlace al archivo de estilos CSS -->
+        <link rel="stylesheet" href="css/estilos.css">
+        <!-- Título de la página-->
+        <title>Danny Sistemas </title>
+    </head>
+    <body>
+        <!-- Encabezado de la página -->
+        <header>
+            <!-- Contenedor del encabezado -->
+            <div class="container">
+                <!-- Contenido del encabezado -->
+                <div class="header-content">
+                    <!-- Logo de la empresa -->
+                    <a href="index.html"><img src="images/malaga.png" alt="logo" width="100"></a>
+                    <!-- Menú de navegación con los distintos enlaces a las diferentes páginas-->
+                    <nav class="nav-menu">
+                        <!-- Enlace a la página de inicio con la clase active para indicar que es la página actual-->
+                        <a href="index.html" class="active">Inicio</a>
+                        <!-- Enlace a las diferentes páginas de la empresa-->
+                        <a href="views/productos.html">Productos</a>
+                        <a href="views/presupuesto.html">Presupuesto</a>
+                        <a href="views/contacto.html">Contacto</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!-- Contenedor principal de la página -->
+        <div class="container">
+            <!-- Sección de bienvenida donde se presenta la página-->
+            <section id="bienvenido">
+                <!-- Título de la sección -->
+                <h2>Bienvenido a Danny Sistemas</h2>
+                <p>Empresa dedicada a la venta de productos de seguridad y control de acceso.</p>
+            </section>
+            <!-- Sección sobre nosotros donde usaremos un grid para la información de la empresa-->
+            <section id="sobre-nosotros">
+                <!-- Título de la sección -->
+                <h2>Quienes somos</h2>
+                <div class="sobre-nosotros-grid">
+                    <!-- Usamos un div para cada item del grid con la misma clase-->
+                    <div class="sobre-nosotros-grid-item">
+                        <h3>Misión</h3>
+                        <p>Proveer a nuestros clientes de productos de seguridad y control de acceso de alta calidad a un precio competitivo.</p>
+                    </div>
+                    <div class="sobre-nosotros-grid-item">
+                        <h3>Visión</h3>
+                        <p>Ser la empresa líder en la venta de productos de seguridad y control de acceso en la región de Málaga.</p>
+                    </div>
+                    <div class="sobre-nosotros-grid-item">
+                        <h3>Valores</h3>
+                        <p>Compromiso con la calidad, servicio al cliente, innovación y responsabilidad social.</p>
+                    </div>
+                </div>
+            </section>
+            <!-- Sección sobre los servicios que ofrecemos donde usaremos un grid para la información de los servicios-->
+            <section id="servicios">
+                <!-- Título de la sección -->
+                <h2>¿Qué servicios ofrecemos?</h2>
+                <div class="servicios-grid">
+                    <!-- Usamos un div para cada item del grid con la misma clase-->
+                    <div class="servicios-grid-item">
+                        <h3>Venta de productos</h3>
+                        <p>Una amplia gama de productos de seguridad y control de acceso, incluyendo sistemas de alarma, cámaras de seguridad, puertas automáticas, etc.</p>
+                    </div>
+                    <div class="servicios-grid-item">
+                        <h3>Instalación y mantenimiento</h3>
+                        <p>Instalación y mantenimiento de sistemas de seguridad y control de acceso</p>
+                    </div>
+                    <div class="servicios-grid-item">
+                        <h3>Asesoría</h3>
+                        <p>Asesoría en la elección de productos y sistemas de seguridad y control de acceso</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- Pie de página de la página -->
+        <footer>
+            <!-- Contenedor del pie de página -->
+            <div class="container">
+                <!-- Contenido del pie de página -->
+                <div class="footer-content">
+                    <!-- Usamos un div para cada item del contenido del pie de página con la misma clase-->
+                    <div class="footer-content-item">
+                        <!-- Aquí primero añadimos las redes sociales de la empresa usando un listado de enlaces -->
+                        <h3>Redes sociales</h3>
+                        <ul>
+                            <!-- Enlaces en modo lista con imágenes de los logos
+                             para que se muestren en horizontal.
+                             Las redes sociales no las he creado, simplemente he puesto el nombre de la empresa
+                             que he visto que la de instagram sí existe -->
+                            <li><a href="https://www.x.com/dannysistemas"><img src="images/xlogo.png" alt="X (Twitter)" width="24" height="24"> X</a></li>
+                            <li><a href="https://www.instagram.com/dannysistemas"><img src="images/instagramlogo.png" alt="Instagram" width="24" height="24"> Instagram</a></li>
+                            <li><a href="https://www.linkedin.com/dannysistemas"><img src="images/linkeidlogo.png" alt="LinkedIn" width="24" height="24"> LinkedIn</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-content-item">
+                        <!-- Aquí añadimos la información legal de la empresa usando un parrafo con enlaces a las diferentes políticas de la empresa-->
+                        <h3>Información legal</h3>
+                        <p>
+                            <a href="#cookies" class="footer-content-item-link">Política de cookies</a>
+                            <a href="#politica-de-privacidad" class="footer-content-item-link">Política de privacidad</a>
+                            <a href="#terminos-y-condiciones" class="footer-content-item-link">Términos y condiciones</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>Derechos reservados &copy; 2025 Danny Sistemas</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,386 @@
+/* Estilo general para que no haya márgenes ni padding y que el box-sizing sea border-box */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para el body 
+cambiamos letra y color de texto
+además añadimos un line-height para que el texto se muestre mejor*/
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Estilos para el contenedor principal de la página*/
+.container {
+    max-width: 1200px; /*Ancho máximo del contenedor*/
+    margin: 0 auto; /* Centramos el contenido horizontalmente*/
+    padding: 0 20px; /* Añadimos un padding de 20px a los lados*/
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #3b546d; /* Color de fondo del encabezado*/
+    padding: 20px 0; /* Añadimos un padding de 20px a la parte superior e inferior*/
+    margin-bottom: 3rem; /* Dejamos espacio de 3 rem con las siguientes secciones */
+}
+
+.header-content {
+    display: flex; /* Usamos flexbox para alinear el contenido del encabezado*/
+    justify-content: space-between; /* Alineamos el contenido dentro de la clase de izquierda a derecha*/
+    align-items: center; /* Centramos el contwenido respecto a la vertical*/
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none; /*Con esta propiedad quitamos el subrayado de los enlaces*/
+    padding: 8px 16px; /* Añadimos espacio vertical y horizontal */
+    border-radius: 4px; /* Añadimos un borde redondeado a los enlaces*/
+    transition: background-color 0.5s; /* Añadimos una transición de 0.5s para cuando tenemos el cursor encima del elemento se cambie el color*/
+}
+
+/* Para los elmentos con la clase .active le añadimos color de fondo, para saber cuál es la página en la que estamos*/
+.nav-menu .active {
+    background-color: #3498db;
+}
+
+/* Al pasar el cursor por el elemento se cambia el color*/
+.nav-menu a:hover {
+    background-color: #34495e;
+}
+
+
+/* Estilos para las secciones */
+section {
+    margin-bottom: 3rem; /* Dejamos espacio con el siguiente elemento*/
+    padding: 2rem; /*Añadimos espacio interno en el elemento para que no esté sobrecargado*/
+    background-color: white;
+    border-radius: 8px; /* Redondeamos cada sección para que quede mejor*/
+    box-shadow: 0 2px 10px #0000001a; /*Creamos una sombra para cada elemento y así dar profundidad*/
+}
+
+section h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem; /* Separamos el título de la sección del contenido*/
+    font-size: 2rem;
+    border-bottom: 3px solid #3498db; /* Añadimos una línea para separar del contenido*/
+    padding-bottom: 0.5rem; /* Para evitar que se pegue la línea y el título de la sección*/
+}
+
+section h3 {
+    color: #34495e;
+    margin: 1.5rem 0 1rem 0; /* añadimos espacio arriba y abajo*/
+}
+
+section p {
+    margin-bottom: 1rem;
+}
+
+/* Estilos para los grids de las secciones */
+.sobre-nosotros-grid,
+.servicios-grid {
+    display: grid; /* Activamos el gird para usar filas y columnas*/
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Para crear tantas columnas como quepan en la pantalla*/
+    gap: 2rem; /* Añadimos espacio entre las columnas*/
+    margin-top: 2rem; /* Añadimos espacio superior con el elemento anterior*/
+}
+
+.sobre-nosotros-grid-item,
+.servicios-grid-item {
+    background-color: white;
+    padding: 2rem; /* Añadimos espacio interno para que no quede el ciontenido apretado*/
+    border-radius: 8px; /* Redondeamos esquinas*/
+    box-shadow: 0 4px 6px #0000001a; /* Creamos una caja por cada elemento del grid apra mejorar el visual*/
+    transition: transform 0.3s, box-shadow 0.3s; /* Añadimos transiciones que se asocian al hover de a continuación*/
+}
+
+/* con este hover los elementos de los grid al pasar el ratón, se mueven hacia arriba en el eje x y
+se destaca la caja que lo contiene*/
+.sobre-nosotros-grid-item:hover,
+.servicios-grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px #00000026;
+}
+
+.sobre-nosotros-grid-item h3,
+.servicios-grid-item h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.sobre-nosotros-grid-item p,
+.servicios-grid-item p {
+    color: #555;
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #3b546d;
+    color: white;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+/* Aplicamos grid por columnas para los elementos del footer para que sea adaptable al tamaño de la página*/
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-content-item h3 {
+    margin-bottom: 1rem;
+    color: #3498db;
+}
+
+/* No añadimos ningún tipo de estilo a la lista*/
+.footer-content-item ul {
+    list-style: none;
+}
+
+.footer-content-item ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* añadimos flex poder alinear la imagen y el texto del enlace*/
+.footer-content-item ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s;
+}
+
+/* Cambiamos el color de los enlaces al pasar el cursor por encima*/
+.footer-content-item ul li a:hover {
+    color: #3498db;
+}
+
+.footer-content-item ul li a img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain; /* Añadimos esta propiedad para que la imagen no se deforme*/
+    vertical-align: middle;
+}
+
+/* el lik ocupa todo el ancho correspondiente*/
+.footer-content-item-link {
+    color: #ecf0f1;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s;
+}
+
+/* Cuando se pase el ratón, cambiamos color y subrayamos*/
+.footer-content-item-link:hover {
+    color: #3498db;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid #34495e;
+    color: #95a5a6;
+}
+
+div h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem; /* Separamos el título de la sección del contenido*/
+    font-size: 2rem;
+    border-bottom: 3px solid #3498db; /* Añadimos una línea para separar del contenido*/
+    padding-bottom: 0.5rem; /* Para evitar que se pegue la línea y el título de la sección*/
+}
+
+
+/* Estilos para los grids de las secciones */
+.gallery-grid {
+    display: grid; /* Activamos el gird para usar filas y columnas*/
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Para crear tantas columnas como quepan en la pantalla*/
+    gap: 2rem; /* Añadimos espacio entre las columnas*/
+    margin-top: 2rem; /* Añadimos espacio superior con el elemento anterior*/
+}
+
+.gallery-grid-item {
+    background-color: white;
+    padding: 2rem; /* Añadimos espacio interno para que no quede el ciontenido apretado*/
+    border-radius: 8px; /* Redondeamos esquinas*/
+    box-shadow: 0 4px 6px #0000001a; /* Creamos una caja por cada elemento del grid apra mejorar el visual*/
+    transition: transform 0.3s, box-shadow 0.3s; /* Añadimos transiciones que se asocian al hover de a continuación*/
+}
+
+/* Reutilizado del anterior, simplemente cambiamos el tamaño de las imágenes*/
+.gallery-grid-item img {
+    width: 240px;
+    height: 240px;
+    object-fit: contain; /* Añadimos esta propiedad para que la imagen no se deforme*/
+    vertical-align: middle;
+}
+
+/* Añadimos que se mueven en el eje X e Y el elemento del grid*/
+.gallery-grid-item:hover {
+    transform: translateX(-5px) translateY(-5px);
+    box-shadow: 0 6px 12px #00000026;
+}
+
+
+/* Estilos para el formulario de presupuesto */
+/* Centramos el formulario y añadimos padding y le añadimos border*/
+#presupuesto-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px #0000001a;
+}
+
+/* Estilos para los labels del formulario */
+#presupuesto-form label {
+    display: block; /* Así ocupamos toda la línea y el input aparece debajo*/
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+#presupuesto-form input, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    transition: border-color 0.3s; /* Transición apra cuando se hace focus*/
+}
+
+#presupuesto-form input:focus,
+#presupuesto-form textarea:focus {
+    outline: none; /* De primeras no hay nada*/
+    border-color: #3498db; /* Cambiamos el borde a ese color*/
+}
+
+/* Estilo para el input del checkbox solo*/
+#presupuesto-form input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Hacemos que la etiqueta se muestre en la misma línea que el checkbox*/
+#presupuesto-form input[type="checkbox"] + label,
+#presupuesto-form label[for="acepto-politica"] {
+    display: inline;
+    font-weight: normal;
+    margin-left: 0.5rem;
+}
+
+/* Estilos para el enlace dentro del checkbox */
+#presupuesto-form a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+/* Subrayamos la política de privacidad*/
+#presupuesto-form a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para el botón de envío */
+#presupuesto-form button {
+    background-color: #3498db;
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer; /* Cambiamos el tipo del cursor al estar encima del botón*/
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+/* Cambiamos color del botón cuando pasamos el cursor*/
+#presupuesto-form button:hover {
+    background-color: #2980b9;
+}
+
+/* Cuando el texto no es válido, se muestra de rojo el border*/
+#presupuesto-form input:invalid:not(:placeholder-shown),
+#presupuesto-form textarea:invalid:not(:placeholder-shown) {
+    border-color: #e74c3c;
+}
+
+/* Estilos para el textarea */
+#presupuesto-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Estilos para la sección de contacto */
+/* Creamos un grid para mostrar dos columnas*/
+#contacto-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contacto-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px #0000001a;
+}
+
+.contacto-content h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.contacto-content h3:first-child {
+    margin-top: 0;
+}
+
+.contacto-content p {
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+/* Estilos para el mapa */
+.contacto-map {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px #0000001a;
+}
+
+.contacto-map h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.contacto-map iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Estilos responsive para contacto */
+/* Cuando cambie el tamaño de la pantalla a menor del permitido, se pondrá una única columna*/
+@media (max-width: 768px) {
+    #contacto-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .contacto-map iframe {
+        height: 300px;
+    }
+}

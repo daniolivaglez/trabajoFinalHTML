@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Metadatos -->
+        <meta charset="UTF-8">
+        <meta name="robots" content="index,follow">
+        <meta name="Author" content="Dani Oliva">
+        <meta name="description" content="HTML">
+        <meta name="keywords" content="web, curso HTML, crear web">
+        <meta name="locality" content="malaga,andalucia,spain,europa">
+        <meta name="category" content="Programación web">
+        <!-- Enlace al archivo de estilos CSS
+        Las rutas cambian al estar dentro de la carpeta views-->
+        <link rel="stylesheet" href="../css/estilos.css">
+        <!-- Título de la página-->
+        <title>Danny Sistemas</title>
+    </head>
+    <body>
+        <!-- Encabezado de la página -->
+        <header>
+            <!-- Contenedor del encabezado -->
+            <div class="container">
+                <!-- Contenido del encabezado -->
+                <div class="header-content">
+                    <a href="../index.html"><img src="../images/malaga.png" alt="logo" width="100"></a>
+                    <nav class="nav-menu">
+                        <a href="../index.html">Inicio</a>
+                        <a href="productos.html">Productos</a>
+                        <a href="presupuesto.html">Presupuesto</a>
+                        <!-- Enlace a la página de contacto con la clase active para indicar que es la página actual-->
+                        <a class="active" href="contacto.html">Contacto</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <h2>Contacto</h2>
+                <p>Puedes contactar con nosotros a través de los siguientes medios para resolver cualquier duda o consulta:</p>
+                <section id="contacto-content">
+                    <!-- Creamos dos divs para hacer un grid para mostrar la info de contacto y luego el mapa-->
+                    <div class="contacto-content">
+                        <h3>Teléfono</h3>
+                        <p>+34 666 666 666</p>
+                        <h3>Email</h3>
+                        <p>dannysistemas@gmail.com</p>
+                        <h3>Dirección</h3>
+                        <p>Calle Falsa 123<br>
+                            Málaga<br>
+                            29001<br>
+                            España</p>
+                    </div>
+                    <div class="contacto-map">
+                        <h3>Mapa de la empresa</h3>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3214.109635252428!2d-4.418169624999999!3d36.719418999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzYuNzE5NDE5LC00LjQxODE2OTY!5e0!3m2!1ses!2ses!4v1234567890123!5m2!1ses!2ses" width="600" height="450" title="Mapa de ubicación de la empresa en Málaga" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <!-- Pie de página de la página -->
+        <footer>
+            <!-- Contenedor del pie de página -->
+            <div class="container">
+                <!-- Contenido del pie de página -->
+                <div class="footer-content">
+                    <!-- Usamos un div para cada item del contenido del pie de página con la misma clase-->
+                    <div class="footer-content-item">
+                        <!-- Aquí primero añadimos las redes sociales de la empresa usando un listado de enlaces -->
+                        <h3>Redes sociales</h3>
+                        <ul>
+                            <!-- Enlaces en modo lista con imágenes de los logos
+                             para que se muestren en horizontal.
+                             Las redes sociales no las he creado, simplemente he puesto el nombre de la empresa
+                             que he visto que la de instagram sí existe -->
+                            <li><a href="https://www.x.com/dannysistemas"><img src="../images/xlogo.png" alt="X (Twitter)" width="24" height="24"> X</a></li>
+                            <li><a href="https://www.instagram.com/dannysistemas"><img src="../images/instagramlogo.png" alt="Instagram" width="24" height="24"> Instagram</a></li>
+                            <li><a href="https://www.linkedin.com/dannysistemas"><img src="../images/linkeidlogo.png" alt="LinkedIn" width="24" height="24"> LinkedIn</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-content-item">
+                        <!-- Aquí añadimos la información legal de la empresa usando un parrafo con enlaces a las diferentes políticas de la empresa-->
+                        <h3>Información legal</h3>
+                        <p>
+                            <a href="#cookies" class="footer-content-item-link">Política de cookies</a>
+                            <a href="#politica-de-privacidad" class="footer-content-item-link">Política de privacidad</a>
+                            <a href="#terminos-y-condiciones" class="footer-content-item-link">Términos y condiciones</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>Derechos reservados &copy; 2025 Danny Sistemas</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
